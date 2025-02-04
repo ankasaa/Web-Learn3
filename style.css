@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* NAVIGASI */
+.navbar {
+  border: 1px solid orange;
+  padding: 25px 0;
+}
+.container {
+  border: 1px solid red;
+  width: 80%;
+  /* margin-inline: auto; membuat item di dalam container berada di tengah */
+  margin-inline: auto;
+}
+.navbar-box {
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-box .menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.navbar-box .menu li {
+  list-style-type: none;
+}
+.navbar-box .menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+/* END NAVIGASI */
+/* HERO */
+.hero {
+  border: 1px solid brown;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://this.deakin.edu.au/wp-content/uploads/2019/06/coding-on-a-computer.jpg);
+  width: 100%;
+  /* min-height: 100vh; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 150px 0;
+  color: white;
+}
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+.hero p {
+  margin-bottom: 40px;
+}
+.hero a {
+  color: white;
+  padding: 10px 20px;
+  background-color: blueviolet;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+.hero a:hover {
+  background-color: tomato;
+}
+/* END HERO */
+
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-box {
+    justify-content: center;
+  }
+  .navbar-box .menu {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 40px;
+    background-color: blueviolet;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px 10px 0 0;
+  }
+  .navbar-box .menu li a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 475px) {
+  .navbar-box .menu {
+    gap: 20px;
+  }
+  .navbar-box .menu li a {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
